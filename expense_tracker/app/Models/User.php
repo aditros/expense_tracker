@@ -45,4 +45,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    /**
+     * Get the expense categories for the user.
+     */
+    public function expenseCategories()
+    {
+        return $this->hasMany(ExpenseCategory::class);
+    }
 }
