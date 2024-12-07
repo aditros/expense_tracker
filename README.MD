@@ -13,8 +13,14 @@ A simple expense tracker built in Laravel. The whole purpose of this project is 
 1. User (Breeze bundle)
 2. ExpenseItem
 - name
-- category
+- category_id
+- user_id
 - date
 - cost
 3. ExpenseCategory
 - name
+- user_id
+4. Report
+- user_id
+- description
+- file
