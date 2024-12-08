@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ExpenseCategoryController;
 use App\Http\Controllers\ExpenseItemController;
+use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -30,6 +31,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/expense-items/edit/{id}', [ExpenseItemController::class, 'editIndex'])->name('expense-items.edit.index');
     Route::patch('/expense-items/edit/{id}', [ExpenseItemController::class, 'editPatch'])->name('expense-items.edit.patch');
     Route::delete('/expense-items/delete/{id}', [ExpenseItemController::class, 'delete'])->name('expense-items.delete');
+
+    Route::get('/reports', [ReportController::class, 'index'])->name('reports.index');
+    Route::get('/reports/create', [ReportController::class, 'createIndex'])->name('reports.create.index');
+    Route::post('/reports/create', [ReportController::class, 'createPost'])->name('reports.create.post');
+    Route::delete('/reports/delete/{id}', [ReportController::class, 'delete'])->name('reports.delete');
 });
 
 require __DIR__.'/auth.php';

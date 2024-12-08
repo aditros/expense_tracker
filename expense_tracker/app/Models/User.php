@@ -61,4 +61,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(ExpenseItem::class);
     }
+
+    /**
+     * Get the reports for the user.
+     */
+    public function reports()
+    {
+        return $this->hasMany(Report::class);
+    }
 }

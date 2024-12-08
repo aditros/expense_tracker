@@ -21,7 +21,7 @@
                     <x-nav-link :href="route('expense-categories.index')" :active="request()->routeIs('expense-categories.index')">
                         {{ __('Expense Category') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('reports.index')" :active="request()->routeIs('reports.index')">
                         {{ __('Report') }}
                     </x-nav-link>
                 </div>
