@@ -15,7 +15,7 @@ A simple expense tracker built in Laravel. The whole purpose of this project is 
 - name
 - category_id
 - user_id
-- date
+- purchase_time
 - cost
 3. ExpenseCategory
 - name
